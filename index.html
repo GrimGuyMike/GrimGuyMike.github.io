@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+    <script src="./index.js" defer></script>
+
+    <title>GrimGuyMike | Portfolio page</title>
+</head>
+
+<body>
+    
+    <div id="start"></div>
+
+    <header>
+        <div class="navbar">
+            <a href="#start">В начало</a>
+            <a href="#about">Обо мне</a>
+            <a href="#projects">Проекты</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="greetings">
+            <h1>Welcome!</h1>
+            <svg id="blob" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path id="blob1" d="M80.9518 39.4326C72.4518 35.9326 64.9518 26.9326 30.9518 29.4326C-3.04816 31.9326 7.45184 40.9326 12.9518 54.9326C18.4518 68.9326 34.9518 60.4326 49.4518 67.4326C63.9518 74.4326 84.9518 66.9326 91.4518 62.9326C97.9518 58.9326 89.4518 42.9326 80.9518 39.4326Z" fill="#D13853"/>
+                </g>
+            </svg>
+        </section>
+    
+        <section id="about">
+            <h2>Обо мне</h2>
+            <div>
+                <p>Приветствую на своей странице! Меня зовут Михаил, мне 23 года.</p>
+
+                <p>Со школы меня интересовало программирование. Информатика давалась легко, периодически появлялось желание углубиться в изучение одного из языков программирования. Однако, в серьезное увлечение эти порывы не переросли, и в старших классах я выбрал в качестве направления для обучения в вузе автомобильную промышленность. В 2016 году поступил в ЮУрГУ на программу бакалавра по направлению "Эксплуатация транспортно-технологических машин и комплексов". По ходу обучения становилось понятно, что выбор специальности был продиктован скорее любовью к автомобилям и автоспорту, чем осознанным и взвешенным решением. Интерес постепенно угасал.</p>
+
+                <p>После выпуска из университета я решил испытать себя на практике и устроился на стажировку механиком в дилерский центр. Во время обучения стала проявлятся сильная нехватка практических знаний и опыта. В моей семье никогда не было автомобиля, поэтому приходилось полагаться на теоретические знания, которых зачастую было недостаточно. К концу обучения я понимал, что не имею желания продолжать работать в этой сфере, и решил сменить специальность.</p>
+
+                <p>Еще во время стажировки с подачи друга я начал изучать Python. Проходил вводные курсы, писал простые программы, осваивал различные библиотеки. Некоторое время не было четкого представления, в каком направлении я хочу развиваться. Пробовал все подряд: Data Science, машинное обучение, web-разработка, примитивные игры... В конце концов я принял решение углубиться в изучение web-разработки, начал осваивать JavaScript и HTML.</p>
+
+                <p>На данный момент продолжаю самообучение, занимаюсь уже около полугода. За это время успел освоить на базовом уровне несколько различных библиотек (Express.js, React.js, Redux, Socket.io) и технологий (AJAX, MongoDB, REST, Git, Figma). Хотелось бы продолжать работать на текущем стеке (Mongo + Express + React + Node), но так же готов осваивать новые технологии. Верю, что можно обучиться чему угодно, если регулярно практиковаться и быть последовательным.</p>
+
+                <p>С моими проектами можно ознакомиться в следующем разделе. Со временем список будет пополняться.</p>
+
+                <p>Спасибо за уделенное внимание!</p>
+            </div>
+        </section>
+    
+        <section id="projects">
+            <h2>Проекты</h2>
+            <div class="projects">
+                <div id="calc">
+                    <div class="links" data-name="Simple calculator">
+                        <a class="run" href="https://ggm-node-calculator.herokuapp.com/" target="_blank">Запустить</a>
+                        <a class="repo" href="https://github.com/GrimGuyMike/node-calculator" target="_blank">Репозиторий</a>
+                    </div>
+                </div>
+
+                <div id="todo">
+                    <div class="links" data-name="ReactTodoList">
+                        <a class="run" href="https://ggm-react-todo-list.herokuapp.com/" target="_blank">Запустить</a>
+                        <a class="repo" href="https://github.com/GrimGuyMike/ggm-react-todo-list" target="_blank">Репозиторий</a>
+                    </div>
+                </div>
+
+                <div id="chat">
+                    <div class="links" data-name="ReactLiveChat">
+                        <a class="run" href="https://ggm-react-live-chat.herokuapp.com/" target="_blank">Запустить</a>
+                        <a class="repo" href="https://github.com/GrimGuyMike/ggm-react-live-chat" target="_blank">Репозиторий</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <div class="contacts">
+                <div class="contact"><img class="icon" src="./icons/email.svg"><a class="link" href="mailto:ggm_job@mail.ru">ggm_job@mail.ru</a></div>
+                <div class="contact"><img class="icon" src="./icons/GitHub-Mark-Light-120px-plus.png"><a class="link" href="https://github.com/GrimGuyMike" target="_blank">GrimGuyMike</a></div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
