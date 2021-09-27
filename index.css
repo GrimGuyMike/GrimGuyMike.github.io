@@ -261,7 +261,7 @@ html::-webkit-scrollbar-track {
     grid-row: 2/4;
     background-image: url('./pics/react-todo.png');
     background-position: top;
-    background-size: 270%;
+    background-size: 220%;
     background-repeat: no-repeat;
 }
 
