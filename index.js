@@ -1,7 +1,7 @@
 function main() {
     const header = document.querySelector('header');
     const greetings = document.getElementById('greetings');
-    const navLinks = document.querySelectorAll('.navbar a');
+    const navLinks = document.querySelectorAll('header a');
     
     // INTERSECTION OBSERVER SETUP
     

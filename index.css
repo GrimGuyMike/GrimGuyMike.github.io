@@ -50,53 +50,36 @@ body {
 \*/
 
 header {
-    height: 80px;
     display: flex;
-    align-items: center;
-    background-color: #222;
     position: sticky;
     top: 0;
-    z-index: 2;
-    user-select: none;
-
-    transition-duration: var(--trans-dur);
-    transition-timing-function: var(--trans-tf);
-    transition-property: height;
-}
-
-header.sticky {
-    height: 40px;
-}
-
-.navbar {
-    margin-left: 30px;
-    transform: translate(0, 0);
-    font-size: 1.2rem;
+    height: 80px;
+    padding-right: 70%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #222;
+    z-index: 1;
 
     transition-duration: var(--trans-dur);
     transition-timing-function: var(--trans-tf);
     transition-property:
-        margin-left
-        transform
-        font-size;
+        padding
+        height;
 }
 
-header.sticky .navbar {
-    margin-left: 50%;
-    transform: translateX(-50%);
-    font-size: initial;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white;
+header > a {
     position: relative;
-    font-weight: 100;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
 }
 
-.navbar a::after {
+header > a:hover {
+    animation: hoverBlink 750ms ease-in-out infinite alternate;
+}
+
+header > a::after {
     content: '';
-    display: inline-block;
     position: absolute;
     left: 50%;
     top: 0;
@@ -111,25 +94,18 @@ header.sticky .navbar {
         width;
 }
 
-.navbar a:hover {
-    animation: hoverBlink 750ms ease-in-out infinite alternate;
-}
-
-.navbar a:hover::after {
+header > a:hover::after {
     left: 0;
     width: 100%;
 }
 
-.navbar a:not(:last-child) {
-    margin-right: 20px;
-
-    transition-duration: var(--trans-dur);
-    transition-timing-function: var(--trans-tf);
-    transition-property: margin-right;
+header.sticky { 
+    padding: 0 25%;
+    height: 40px;
 }
 
-header.sticky .navbar a:not(:last-child) {
-    margin-right: 80px;
+header.sticky > a {
+    font-size: unset;
 }
 
 /*\
@@ -229,7 +205,7 @@ html::-webkit-scrollbar-track {
     box-shadow: none;
 }
 
-#greetings h1 {
+#greetings > h1 {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -244,7 +220,7 @@ html::-webkit-scrollbar-track {
 
 #about {
     text-align: justify;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /*      PROJECTS        */
