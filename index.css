@@ -25,8 +25,8 @@
 \*/
 
 :root {
-    --default-trans-dur: 150ms;
-    --default-trans-tf: ease-out;
+    --trans-dur: 150ms;
+    --trans-tf: ease-out;
     --section-border-radius: 15px;
 
     font-family: Raleway, sans-serif;
@@ -43,6 +43,12 @@ body {
     background: linear-gradient(45deg, #a00, #00a);
 }
 
+/*\
+|*|
+|*|     HEADER
+|*|
+\*/
+
 header {
     height: 80px;
     display: flex;
@@ -53,8 +59,8 @@ header {
     z-index: 2;
     user-select: none;
 
-    transition-duration: var(--default-trans-dur);
-    transition-timing-function: var(--default-trans-tf);
+    transition-duration: var(--trans-dur);
+    transition-timing-function: var(--trans-tf);
     transition-property: height;
 }
 
@@ -67,8 +73,8 @@ header.sticky {
     transform: translate(0, 0);
     font-size: 1.2rem;
 
-    transition-duration: var(--default-trans-dur);
-    transition-timing-function: var(--default-trans-tf);
+    transition-duration: var(--trans-dur);
+    transition-timing-function: var(--trans-tf);
     transition-property:
         margin-left
         transform
@@ -98,8 +104,8 @@ header.sticky .navbar {
     height: 100%;
     border-bottom: 2px solid #f46;
 
-    transition-duration: var(--default-trans-dur);
-    transition-timing-function: var(--default-trans-tf);
+    transition-duration: var(--trans-dur);
+    transition-timing-function: var(--trans-tf);
     transition-property:
         left
         width;
@@ -117,14 +123,20 @@ header.sticky .navbar {
 .navbar a:not(:last-child) {
     margin-right: 20px;
 
-    transition-duration: var(--default-trans-dur);
-    transition-timing-function: var(--default-trans-tf);
+    transition-duration: var(--trans-dur);
+    transition-timing-function: var(--trans-tf);
     transition-property: margin-right;
 }
 
 header.sticky .navbar a:not(:last-child) {
     margin-right: 80px;
 }
+
+/*\
+|*|
+|*|     CONTENT
+|*|
+\*/
 
 main {
     color: white;
@@ -203,9 +215,11 @@ html::-webkit-scrollbar-track {
 
 /*\
 |*|
-|*|     SECTIONS
+|*|     INDIVIDUAL SECTIONS
 |*|
 \*/
+
+/*      GREETINGS       */
 
 #greetings {
     position: relative;
@@ -226,14 +240,14 @@ html::-webkit-scrollbar-track {
     text-shadow: #222 5px 5px 0;
 }
 
-/*------------------------------------------------------*/
+/*      ABOUT       */
 
 #about {
     text-align: justify;
     line-height: 1.5;
 }
 
-/*------------------------------------------------------*/
+/*      PROJECTS        */
 
 #projects {
     background-color: #0005;
@@ -292,8 +306,8 @@ html::-webkit-scrollbar-track {
     align-items: center;
     justify-content: center;
 
-    transition-duration: var(--default-trans-dur);
-    transition-timing-function: var(--default-trans-tf);
+    transition-duration: var(--trans-dur);
+    transition-timing-function: var(--trans-tf);
     transition-property: transform;
 }
 
@@ -334,8 +348,8 @@ html::-webkit-scrollbar-track {
     height: 100%;
     border-bottom: 2px solid #f46;
 
-    transition-duration: var(--default-trans-dur);
-    transition-timing-function: var(--default-trans-tf);
+    transition-duration: var(--trans-dur);
+    transition-timing-function: var(--trans-tf);
     transition-property:
         left
         width;
@@ -346,7 +360,7 @@ html::-webkit-scrollbar-track {
     width: 100%;
 }
 
-/*------------------------------------------------------*/
+/*      CONTACTS        */
 
 #contacts {
     margin-bottom: 100px;
