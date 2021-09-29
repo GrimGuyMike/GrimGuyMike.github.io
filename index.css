@@ -484,6 +484,10 @@ html::-webkit-scrollbar-track {
     #greetings > h1 {
         font-size: 4rem;
     }
+
+    .projects > div > .links::after {
+        font-size: .85rem;
+    }
 }
 
 @media (max-width: 400px) {
