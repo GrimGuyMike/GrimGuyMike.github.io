@@ -50,29 +50,33 @@ body {
 \*/
 
 header {
-    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     height: 80px;
-    padding-right: 70%;
-    align-items: center;
-    justify-content: space-around;
     background-color: #222;
     z-index: 1;
 
     transition-duration: var(--trans-dur);
     transition-timing-function: var(--trans-tf);
     transition-property:
-        padding
         height;
 }
 
 header > nav {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    align-items: center;
+    margin-left: 0;
+    height: 100%;
+    width: 450px;
+
+    transition-duration: var(--trans-dur);
+    transition-timing-function: var(--trans-tf);
+    transition-property:
+        margin-left
+        transform;
 }
 
 header > nav > a {
@@ -80,6 +84,12 @@ header > nav > a {
     font-size: 1.2rem;
     color: white;
     text-decoration: none;
+    margin: 0 10px;
+    white-space: nowrap;
+
+    transition-duration: var(--trans-dur);
+    transition-timing-function: var(--trans-tf);
+    transition-property: font-size;
 }
 
 header > nav > a:hover {
@@ -109,11 +119,15 @@ header > nav > a:hover::after {
 
 header > .burger {
     display: none;
+    cursor: pointer;
 }
 
 header.min { 
-    padding: 0 25%;
     height: 40px;
+}
+
+header.min > nav {
+    margin-left: calc((100% - 450px) / 2);
 }
 
 header.min > nav > a {
@@ -128,7 +142,6 @@ header.min > nav > a {
 
 main {
     color: white;
-    min-width: 600px;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -389,7 +402,6 @@ html::-webkit-scrollbar-track {
     /* HEADER */
 
     header {
-        display: block;
         height: 40px;
     }
 
@@ -466,6 +478,10 @@ html::-webkit-scrollbar-track {
         padding: 80px 25px;
     }
 
+}
+
+@media (max-width: 1500px) {
+    /*  */
 }
 
 @media (max-width: 600px) {
