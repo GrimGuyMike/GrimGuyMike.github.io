@@ -7,7 +7,7 @@ function main() {
     
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            header.classList.toggle('sticky', !entry.isIntersecting);
+            header.classList.toggle('min', !entry.isIntersecting);
         });
     }, { threshold: .25 });
     

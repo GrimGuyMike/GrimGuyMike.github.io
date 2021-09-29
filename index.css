@@ -51,8 +51,10 @@ body {
 
 header {
     display: flex;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     height: 80px;
     padding-right: 70%;
     align-items: center;
@@ -67,18 +69,24 @@ header {
         height;
 }
 
-header > a {
+header > nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+header > nav > a {
     position: relative;
     font-size: 1.2rem;
     color: white;
     text-decoration: none;
 }
 
-header > a:hover {
+header > nav > a:hover {
     animation: hoverBlink 750ms ease-in-out infinite alternate;
 }
 
-header > a::after {
+header > nav > a::after {
     content: '';
     position: absolute;
     left: 50%;
@@ -94,17 +102,17 @@ header > a::after {
         width;
 }
 
-header > a:hover::after {
+header > nav > a:hover::after {
     left: 0;
     width: 100%;
 }
 
-header.sticky { 
+header.min { 
     padding: 0 25%;
     height: 40px;
 }
 
-header.sticky > a {
+header.min > nav > a {
     font-size: unset;
 }
 
@@ -183,9 +191,6 @@ html::-webkit-scrollbar-track {
 }
 
 #blob1 {
-    transform: rotate(0deg);
-    transform-origin: center;
-    transform-box: fill-box;
     animation: morph 4000ms linear infinite normal;
 }
 
